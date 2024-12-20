@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script src="./js/shop.js" defer></script>
+  </head>
+  <body>
+    <section class="header-container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <img class="logo" src="./assets/Images/Logo.png" alt="Logo" />
+            </li>
+            <li class="nav-buttons">
+              <a href="./index.html">Home</a>
+              <a href="./products.html">Products</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./klanten.html">Klanten</a>
+            </li>
+            <form class="search" action="#" method="GET">
+              <input
+                type="search"
+                name="searchTerm"
+                id="searchInput"
+                placeholder="Zoek hier..."
+              /><button type="submit" class="zoekbutton" id="searchButton">
+                <img
+                  src="./assets/Images/zoek-icon.jpg"
+                  alt="Zoek-icon"
+                  class="zoek-icon"
+                />
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </header>
+
+      <aside class="shopping-cart" id="winkelmandje">
+        <section class="cart-header">
+          <button id="toggleCartButton">Bekijk Winkelmandje</button>
+          <button id="toggleWishlistButton">Bekijk Wishlist</button>
+        </section>
+        <section class="cart-items" style="display: none"></section>
+        <section class="cart-total" style="display: none">
+          <strong>Totaal:</strong> €<span id="cart-total">0</span>
+        </section>
+        <section class="wishlist-items" style="display: none"></section>
+      </aside>
+    </section>
+
+    <figure id="hero-image">
+      <img
+        src="./assets/Images/Horizontaal_sfeerbeeld.jpg"
+        alt="Sfeerbeeld trailrunning schoenen"
+      />
+    </figure>
+
+    <main class="main-contact">
+      <h1>Neem contact op</h1>
+      <section class="contact-form">
+        <form id="contact-form" action="#" method="POST">
+          <label for="name">Naam:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Voor-en achternaam"
+          />
+
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="E-mailadres"
+          />
+
+          <label for="message">Bericht:</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Schrijf hier..."
+          ></textarea>
+
+          <label for="role">Contacteer:</label>
+          <select id="role" name="role">
+            <option value="" disabled selected>Maak uw keuze</option>
+            <option value="verkoper">Verkoper</option>
+            <option value="webdesigner">Webdesigner</option>
+          </select>
+
+          <button type="submit">Verstuur</button>
+        </form>
+      </section>
+      <article id="map"></article>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 All4Trail - Alle rechten voorbehouden</p>
+    </footer>
+
+    <script src="./js/map.js"></script>
+  </body>
+</html>

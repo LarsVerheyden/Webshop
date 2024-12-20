@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/shop.js" defer></script>
+  </head>
+  <body>
+    <section class="header-container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <img class="logo" src="./assets/Images/Logo.png" alt="Logo" />
+            </li>
+            <li class="nav-buttons">
+              <a href="./index.html">Home</a>
+              <a href="./products.html">Products</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./klanten.html">Klanten</a>
+            </li>
+            <form class="search" action="#" method="GET">
+              <input
+                type="search"
+                name="searchTerm"
+                id="searchInput"
+                placeholder="Zoek hier..."
+              /><button type="submit" class="zoekbutton" id="searchButton">
+                <img
+                  src="./assets/Images/zoek-icon.jpg"
+                  alt="Zoek-icon"
+                  class="zoek-icon"
+                />
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </header>
+
+      <aside class="shopping-cart" id="winkelmandje">
+        <section class="cart-header">
+          <button id="toggleCartButton">Bekijk Winkelmandje</button>
+          <button id="toggleWishlistButton">Bekijk Wishlist</button>
+        </section>
+        <section class="cart-items" style="display: none"></section>
+        <section class="cart-total" style="display: none">
+          <strong>Totaal:</strong> €<span id="cart-total">0</span>
+        </section>
+        <section class="wishlist-items" style="display: none"></section>
+      </aside>
+    </section>
+    <figure id="hero-image">
+      <img
+        src="./assets/Images/Horizontaal_sfeerbeeld.jpg"
+        alt="Sfeerbeeld trailrunning schoenen"
+      />
+    </figure>
+
+    <main class="product-detail">
+      <section class="product-info">
+        <h1>New Balance Fresh Foam X More Trail v3</h1>
+        <h2>Innovatieve grip en energieteruggave voor ultralopers</h2>
+      </section>
+
+      <section class="product-features">
+        <h3>Key Features:</h3>
+        <br />
+        <ul>
+          <li>
+            Fresh Foam X-demping voor ultiem comfort en maximale schokabsorptie
+          </li>
+          <li>
+            Vibram® EcoStep EVO-buitenzool voor duurzame grip op diverse
+            terreinen
+          </li>
+          <li>
+            Ademend en robuust mesh bovenwerk met TPU-verstevigingen voor extra
+            ondersteuning
+          </li>
+          <li>
+            Ruime teenbox voor natuurlijk bewegingsgemak tijdens lange runs
+          </li>
+          <li>
+            Waterafstotende behandeling voor bescherming tegen lichte regen en
+            modder
+          </li>
+        </ul>
+        <br />
+        <h3>Specificaties:</h3>
+        <br />
+        <ul>
+          <li>Offset: 4mm</li>
+          <li>Gewicht: 295g (heren, maat 42)</li>
+          <li>Prijs: €160,00</li>
+          <li>Type: Neutraal, trailrunning</li>
+          <li>
+            Bovenwerk: Ademend mesh met versterkte overlays voor duurzaamheid
+          </li>
+        </ul>
+      </section>
+
+      <figure class="product-image">
+        <img
+          src="./assets/Images/ProductImages/NBFFXMoreTrail.webp"
+          alt="New Balance Fresh Foam More Trail"
+        />
+        <figcaption>
+          Bron afbeelding:
+          https://images.all4running.be/catalog/product/e/5/9/e/
+          e59ed1a12ea7bba2f3d8ce9c6e60e48d27004904_New_Balance_MTMORCA3_Fresh_Foam_X_More_Trail_v3_0.jpg?auto=format&cb_ts=1675675617&fit=fill&h=500&w=500&s=1db164ecac52d9941ac6240671acc0ff
+        </figcaption>
+      </figure>
+
+      <section class="product-review">
+        <h4>Laat een review achter:</h4>
+        <form action="#" method="post">
+          <label for="username">Naam:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="Voor-en achternaam"
+          /><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="E-mailadres"
+          /><br />
+
+          <label for="review">Uw review:</label>
+          <textarea
+            id="review"
+            name="review"
+            rows="8"
+            required
+            placeholder="Schrijf hier..."
+          ></textarea
+          ><br />
+
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+
+      <section class="buttons-section">
+        <img
+          src="./assets/Images/leeg_hartje.png"
+          alt="Wishlist Icon"
+          class="wishlist-icon"
+          data-product="New Balance Fresh Foam More Trail"
+        />
+        <button
+          class="cart-button"
+          data-product="New Balance Fresh Foam More Trail"
+        >
+          Voeg toe aan winkelmandje
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 All4Trail - Alle rechten voorbehouden</p>
+    </footer>
+  </body>
+</html>

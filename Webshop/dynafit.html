@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/shop.js" defer></script>
+  </head>
+  <body>
+    <section class="header-container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <img class="logo" src="./assets/Images/Logo.png" alt="Logo" />
+            </li>
+            <li class="nav-buttons">
+              <a href="./index.html">Home</a>
+              <a href="./products.html">Products</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./klanten.html">Klanten</a>
+            </li>
+            <form class="search" action="#" method="GET">
+              <input
+                type="search"
+                name="searchTerm"
+                id="searchInput"
+                placeholder="Zoek hier..."
+              /><button type="submit" class="zoekbutton" id="searchButton">
+                <img
+                  src="./assets/Images/zoek-icon.jpg"
+                  alt="Zoek-icon"
+                  class="zoek-icon"
+                />
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </header>
+
+      <aside class="shopping-cart" id="winkelmandje">
+        <section class="cart-header">
+          <button id="toggleCartButton">Bekijk Winkelmandje</button>
+          <button id="toggleWishlistButton">Bekijk Wishlist</button>
+        </section>
+        <section class="cart-items" style="display: none"></section>
+        <section class="cart-total" style="display: none">
+          <strong>Totaal:</strong> €<span id="cart-total">0</span>
+        </section>
+        <section class="wishlist-items" style="display: none"></section>
+      </aside>
+    </section>
+    <figure id="hero-image">
+      <img
+        src="./assets/Images/Horizontaal_sfeerbeeld.jpg"
+        alt="Sfeerbeeld trailrunning schoenen"
+      />
+    </figure>
+
+    <main class="product-detail">
+      <section class="product-info">
+        <h1>Dynafit Ultra 100</h1>
+        <h2>Ideaal voor ultratrails met lichte maar robuuste ondersteuning</h2>
+      </section>
+
+      <section class="product-features">
+        <h3>Key Features:</h3>
+        <br />
+        <ul>
+          <li>
+            Vibram® Megagrip-buitenzool voor uitstekende grip op alle terreinen
+          </li>
+          <li>
+            Maximale demping dankzij de dual-density EVA-tussenzool voor
+            ultralange afstanden
+          </li>
+          <li>
+            Naadloos, ademend mesh bovenwerk voor langdurig comfort tijdens
+            intensieve runs
+          </li>
+          <li>
+            Extra brede pasvorm voor meer comfort en stabiliteit op technische
+            trails
+          </li>
+          <li>
+            Rock Protection Plate biedt bescherming tegen scherpe stenen en
+            oneffenheden
+          </li>
+        </ul>
+        <br />
+        <h3>Specificaties:</h3>
+        <br />
+        <ul>
+          <li>Offset: 6mm</li>
+          <li>Gewicht: 330g (heren, maat 42)</li>
+          <li>Prijs: €175,00</li>
+          <li>Type: Neutraal, ultratrailrunning</li>
+          <li>
+            Bovenwerk: Ademend mesh met TPU-verstevigingen voor extra
+            bescherming
+          </li>
+        </ul>
+      </section>
+
+      <figure class="product-image">
+        <img
+          src="./assets/Images/ProductImages/Dynafit_Ultra_100.jpeg"
+          alt="Dynafit Ultra 100"
+        />
+        <figcaption>
+          Bron afbeelding:
+          https://images.all4running.be/catalog/product/3/0/d/a/
+          30dad35f1e0b9145105d2adbdcfe162bf47b6a80_08_0000064084_5654_0.jpg?auto=format&cb_ts=1675675617&fit=fill&h=500&w=500&s=d87a392133fd106664b3ecfe3022c4bc
+        </figcaption>
+      </figure>
+
+      <section class="product-review">
+        <h4>Laat een review achter:</h4>
+        <form action="#" method="post">
+          <label for="username">Naam:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="Voor-en achternaam"
+          /><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="E-mailadres"
+          /><br />
+
+          <label for="review">Uw review:</label>
+          <textarea
+            id="review"
+            name="review"
+            rows="8"
+            required
+            placeholder="Schrijf hier..."
+          ></textarea
+          ><br />
+
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+
+      <section class="buttons-section">
+        <img
+          src="./assets/Images/leeg_hartje.png"
+          alt="Wishlist Icon"
+          class="wishlist-icon"
+          data-product="Dynafit Ultra 100"
+        />
+        <button class="cart-button" data-product="Dynafit Ultra 100">
+          Voeg toe aan winkelmandje
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 All4Trail - Alle rechten voorbehouden</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klanten</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/shop.js" defer></script>
+  </head>
+  <body>
+    <section class="header-container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <img class="logo" src="./assets/Images/Logo.png" alt="Logo" />
+            </li>
+            <li class="nav-buttons">
+              <a href="./index.html">Home</a>
+              <a href="./products.html">Products</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./klanten.html">Klanten</a>
+            </li>
+            <form class="search" action="#" method="GET">
+              <input
+                type="search"
+                name="searchTerm"
+                id="searchInput"
+                placeholder="Zoek hier..."
+              /><button type="submit" class="zoekbutton" id="searchButton">
+                <img
+                  src="./assets/Images/zoek-icon.jpg"
+                  alt="Zoek-icon"
+                  class="zoek-icon"
+                />
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </header>
+
+      <aside class="shopping-cart" id="winkelmandje">
+        <section class="cart-header">
+          <button id="toggleCartButton">Bekijk Winkelmandje</button>
+          <button id="toggleWishlistButton">Bekijk Wishlist</button>
+        </section>
+        <section class="cart-items" style="display: none"></section>
+        <section class="cart-total" style="display: none">
+          <strong>Totaal:</strong> €<span id="cart-total">0</span>
+        </section>
+        <section class="wishlist-items" style="display: none"></section>
+      </aside>
+    </section>
+
+    <figure id="hero-image">
+      <img
+        src="./assets/Images/Horizontaal_sfeerbeeld.jpg"
+        alt="Sfeerbeeld trailrunning schoenen"
+      />
+    </figure>
+
+    <main class="customers-container-main">
+      <h1>Onze trouwste klanten</h1>
+      <section
+        class="customers-container-style"
+        id="customers-container-script"
+      ></section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 All4Trail - Alle rechten voorbehouden</p>
+    </footer>
+  </body>
+</html>

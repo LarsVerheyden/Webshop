@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/shop.js" defer></script>
+  </head>
+  <body>
+    <section class="header-container">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <img class="logo" src="./assets/Images/Logo.png" alt="Logo" />
+            </li>
+            <li class="nav-buttons">
+              <a href="./index.html">Home</a>
+              <a href="./products.html">Products</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./klanten.html">Klanten</a>
+            </li>
+            <form class="search" action="#" method="GET">
+              <input
+                type="search"
+                name="searchTerm"
+                id="searchInput"
+                placeholder="Zoek hier..."
+              /><button type="submit" class="zoekbutton" id="searchButton">
+                <img
+                  src="./assets/Images/zoek-icon.jpg"
+                  alt="Zoek-icon"
+                  class="zoek-icon"
+                />
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </header>
+
+      <aside class="shopping-cart" id="winkelmandje">
+        <section class="cart-header">
+          <button id="toggleCartButton">Bekijk Winkelmandje</button>
+          <button id="toggleWishlistButton">Bekijk Wishlist</button>
+        </section>
+        <section class="cart-items" style="display: none"></section>
+        <section class="cart-total" style="display: none">
+          <strong>Totaal:</strong> €<span id="cart-total">0</span>
+        </section>
+        <section class="wishlist-items" style="display: none"></section>
+      </aside>
+    </section>
+    <figure id="hero-image">
+      <img
+        src="./assets/Images/Horizontaal_sfeerbeeld.jpg"
+        alt="Sfeerbeeld trailrunning schoenen"
+      />
+    </figure>
+
+    <main class="product-detail">
+      <section class="product-info">
+        <h1>Adidas Terrex Agravic Speed Ultra</h1>
+        <h2>
+          Top-prestatie voor trailrunning, ontworpen voor snelheid en grip
+        </h2>
+      </section>
+
+      <section class="product-features">
+        <h3>Key Features:</h3>
+        <br />
+        <ul>
+          <li>Responsieve demping voor een soepele rit</li>
+          <li>Verbeterde grip voor zowel droge als natte omstandigheden</li>
+          <li>
+            Waterafstotende bovenkant voor droge voeten tijdens lange runs
+          </li>
+          <li>Ademende mesh voor ventilatie en comfort</li>
+          <li>Ultralicht ontwerp voor snelheid en energie-efficiëntie</li>
+          <br />
+        </ul>
+        <h3>Specificaties:</h3>
+        <br />
+        <ul>
+          <li>Responsiviteit: Hoog</li>
+          <li>Offset: 8mm</li>
+          <li>Gewicht: 290g (per schoen)</li>
+          <li>Prijs: €139,99</li>
+          <li>Type: Neutraal, trailrunning</li>
+        </ul>
+      </section>
+
+      <figure class="product-image">
+        <img
+          src="./assets/Images/ProductImages/AgravicSpeedUltra.webp"
+          alt="Adidas Terrex Agravic Speed Ultra"
+        />
+        <figcaption>
+          Bron afbeelding:
+          https://images.all4running.be/catalog/product/8/8/4/d/884d3f92fa5238902028f52aa3966e67936f375d_IF6594_0.jpg?auto=format&cb_ts=1675675617&fit=fill&h=500&w=500&s=0a833c0354fcc0eeb91244c49afa9fad
+        </figcaption>
+      </figure>
+
+      <section class="product-review">
+        <h4>Laat een review achter:</h4>
+        <form action="#" method="post">
+          <label for="username">Naam:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="Voor-en achternaam"
+          /><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="E-mailadres"
+          /><br />
+
+          <label for="review">Uw review:</label>
+          <textarea
+            id="review"
+            name="review"
+            rows="8"
+            required
+            placeholder="Schrijf hier..."
+          ></textarea
+          ><br />
+
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+
+      <section class="buttons-section">
+        <img
+          src="./assets/Images/leeg_hartje.png"
+          alt="Wishlist Icon"
+          class="wishlist-icon"
+          data-product="Agravic Speed Ultra"
+        />
+        <button class="cart-button" data-product="Agravic Speed Ultra">
+          Voeg toe aan winkelmandje
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 All4Trail - Alle rechten voorbehouden</p>
+    </footer>
+  </body>
+</html>
